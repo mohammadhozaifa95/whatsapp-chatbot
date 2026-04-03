@@ -24,8 +24,8 @@ public class HealthController {
      * 
      * @return "pong" - signals that the app is running and healthy
      */
-    @GetMapping("/health/ping")
-    public String ping() {
-        return "pong";  // Reply to ping - means "I am alive"
-    }
+	 @GetMapping("/")
+	    public String home() {
+	        return "✅ WhatsApp Chatbot is active!";
+	    }
 }
