@@ -1,10 +1,8 @@
 package com.chatbot.utils;
 
-
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.servers.Server;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +19,7 @@ public class SwaggerConfig {
                         .title("WhatsApp Chatbot API")
                         .version("1.0")
                         .description("""
-                                 WhatsApp Chatbot Backend Simulation
+                                WhatsApp Chatbot Backend Simulation
                                 
                                 This API simulates a WhatsApp chatbot backend using Spring Boot.
                                 
@@ -41,17 +39,17 @@ public class SwaggerConfig {
                         .contact(new Contact()
                                 .name("Mohammad Hozaifa")
                                 .email("khanmohdhozaifa@gmail.com")
-                                .url("https://github.com/mohammadhozaifa95"))
-                        .license(new License()
-                                .name("MIT License")
-                                .url("https://opensource.org/licenses/MIT")))
+                                .url("https://github.com/mohammadhozaifa95")))
                 .servers(List.of(
                         new Server()
                                 .url("http://localhost:8080")
                                 .description("Local Development Server"),
                         new Server()
                                 .url("https://whatsapp-chatbot.onrender.com")
-                                .description("Production Server (Render)")
+                                .description("Production Server (Old Render)"),
+                        new Server()
+                                .url("https://whatsapp-chatbot-zlrx.onrender.com")
+                                .description("Production Server (New Render)")
                 ));
     }
 }
