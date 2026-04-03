@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.chatbot.utils.MessageLogger;
 
+import io.swagger.v3.oas.annotations.Hidden;
+
 @RestControllerAdvice
+@Hidden
 public class GlobalExceptionHandler {
     
     @ExceptionHandler(InvalidMessageException.class)
